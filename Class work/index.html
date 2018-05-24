@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nike Sport ware</title>
+</head>
+<body>
+	<h2> Welcome to my website and it is nice to meet you</h2>
+	<h4 id="Hello"></h4>
+
+		<script>
+			console.log('Welcome to Nike Sport ware');
+			//Getting user input for their name
+			document.body.bgColor= "pink";
+			var name = prompt('Enter Name');
+			console.log(name);
+			//Getting the element that has the id 'hello'
+			var h4 = document.getElementById('Hello');
+			//Editing text of that element
+			h4.innerHTML = 'Hello my name is '+ name +' :)';
+			h4.style.color= "blue";
+		</script>
+</body>
+</html>
