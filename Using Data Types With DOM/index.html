@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+
+</head>
+	<body>
+	<h1>Look at the console!</h1>
+	<h1 id="WelcomeText"></h1>
+	<h2>
+		About you
+	</h2>
+	<h2 id= "About">
+		
+	</h2>
+	<script src="Script.js"></script>
+	<script> 
+		console.log('This is a message from internet');
+		var user = prompt('Buenos dias quien eres?');
+		console.log(user);
+		console.log("your name is " + user.length + " character long");
+		//Getting the element that has the id 'WelcomeText'
+		var h1 = document.getElementById("WelcomeText");
+		//Esta es una propiedad que consigue el texto que especificamos
+		h1.innerHTML = "Hello " + user + "!!!";
+		//Favorite color promp
+		var FavColor = prompt('What\'s is your favorite color?');
+		h1.style.color = FavColor;
+		// About you
+		var info = prompt ("Dime sobre tu comida favorita");
+		document.getElementById('About').innerHTML = info;
+		
+
+	</script>
+	</body>
+</html>
