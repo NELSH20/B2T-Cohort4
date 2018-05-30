@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Home Work
+	</title>
+</head>
+<body>
+	
+	<p id='display'></p>
+
+<form>
+
+First name: <input type='text' id='fname' /><br>
+
+Last name: <input type='text' id='lname' /><br >
+
+<input type='button' value='Submit' onclick='getFormValue()'>
+
+</form >
+<script type='text/javascript'>
+	// creat an event listener //
+	function getFormValue(){
+		var fname = document.getElementById('fname').value;
+		var lname = document.getElementById ('lname').value;
+		document.getElementById('display').innerHTML = "Hello " + fname + " " + lname;
+
+		//var Display = document.getElementById('display').innerHTML;
+		//Display.innerHTML = 'Hello' + fname + " " + lname
+	}
+
+	/*function displayName(){
+		document.getElementById('display').innerHTML = name;
+	}*/
+/*
+function getFormvalue()
+{
+
+var Display = document.getElementById('display');
+var fname =  document.getElementById ('fname');
+var lname =  document.getElementById ('lname');
+
+Display.innerHTML = 'Hello' + fname.value + " " + lname.value;
+}
+*/
+ /* var x=document.getElementById("form1");
+  for (var i=0;i<x.length;i++)
+  {
+   if (x.elements[i].value!='Submit')
+    {  
+      console.log(x.elements[i].value);
+     }  
+   } */
+
+
+/* var name = "";
+function getFormValue(){
+name++;
+document.getElementById("fname").value = "Hello " + name + "" document.getElementById("lname").value ;
+	/* function showMessage(){
+            var message = document.getElementById("message").value;
+            display.innerHTML= message; */
+
+
+</script>
+</body>
+</html>
