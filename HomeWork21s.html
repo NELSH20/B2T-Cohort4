@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<p id="Welcome">
+		
+	</p>
+	<!--
+		Display todays date on the HTML (body). With either a P tag or a H1 tag. 
+
+		In script. Make a variable that holds the value of the property of Data().getDay(). Use logic operatos to compare with case. use the CASE to idenftified which number is between 0-6 is day and adequate message should display.
+
+		Use a switch statement to assign appropriate day
+
+		Display a welcome message containing the day of the week.
+	-->
+<script type="text/javascript">
+	var today = new Date().getDay();
+	/*if (today == 0){
+		console.log( "welcome today is " + "sunday" + "!")
+	} else if (
+		) */
+		function HelloMessage(){
+		switch(today){
+			case 0:
+			document.getElementById('Welcome').innerHTML = "welcome today is Sunday!"; 
+				break;
+			case 1: document.getElementById('Welcome').innerHTML = "Welcome today is Monday!"; break;
+			case 2: document.getElementById('Welcome').innerHTML = "Welcome today is Tuesday!"; break;
+			case 3: document.getElementById('Welcome').innerHTML = "Welcome today is Wenesdays!"; break;
+			case 4: document.getElementById('Welcome').innerHTML = "Welcome today is Thursday!"; break;
+			case 5: document.getElementById('Welcome').innerHTML = "Welcome today is Friday!"; break;
+			case 6: document.getElementById('Welcome').innerHTML = "Welcome today is Saturday!"; break;
+			}
+		}
+		HelloMessage();	
+</script>
+</body>
+</html>
