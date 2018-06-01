@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		HomeWork 
+	</title>
+</head>
+
+<body>
+	<p id='display'>
+	</p>
+
+	
+	<input type="button" value="add" onclick="pushElement()">
+<script type="text/javascript">
+	var arr =[]
+	function pushElement(){
+		arr.push(prompt().toLowerCase());
+		//Not need to9 repeat value//
+		arr.sort();
+		document.getElementById('display').innerHTML = arr.join(" with ");
+	}
+	// never set your variable that equals an array to anything else. Specially an element.//
+
+</script>
+</body>
+</html>
