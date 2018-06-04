@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<h1 id="display"></h1>
+<script type="text/javascript">
+	//var input = prompt ("How old are you?");
+	//var age = paseInt(input);
+
+	var A = parseInt(prompt ("Please provide a number"));
+	var B = parseInt(prompt("Please provide another number"));
+	var C = parseInt(prompt("One last number"))
+	//si tu grupo de usuarios esta entre 25-55
+	if (A > B && A > C ){ 
+		document.getElementById("display").innerHTML = A + " Is the biggest number!";
+	}
+	else if(B > C && B > A){
+		document.getElementById("display").innerHTML = B + " Is the biggest number!";
+	}
+	/*else if(input >55){ 
+		alert("Go to an nursing home");
+	}*/
+	else {
+		document.getElementById("display").innerHTML = C + " Is the biggest number!";
+		}
+
+	</script>
+</body>
+</html>
