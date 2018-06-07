@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="Display"></h1>
+	<!-- 
+	-->
+	<script type="text/javascript">
+	/*
+
+		Consider the following arrays :
+	color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+
+	o = ["th", "st", "nd", "rd"];
+
+	Display the colors on the web page in the following way :
+
+	"1st choice is Blue ."
+
+	"2nd choice is Green."
+
+	"3rd choice is Red."
+
+	"4th choice is Orange."
+
+	etc
+
+	*/
+
+		var color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+
+		var o = ["th","st","nd","rd"];
+
+			var count = 1;
+				//Going trough the array.
+			for(var i = 0; i < color.length; i++){
+				//simple version. The colors are already in oder I just need to match them up
+			if(count <= 3){
+
+			document.getElementById('Display').innerHTML += count + o[count] + " choice is " + color[i] + '<br>';
+			//count++;
+				}
+
+			else{
+			document.getElementById('Display').innerHTML += count + o[0] + " choice is " + color[i] +'<br>';
+			//count++;
+				}
+			count++;
+			}
+
+/*
+		for (var i = color.length; i <= ; i--) {
+			color[i]
+		}
+
+		for(var i = 0; i < o.length; i++){
+			if (o[i][0] == color){
+				document.getElementById('people').innerHTML +=     '<li style="color:red">' + names[i] + '</li>';
+			}else{
+				document.getElementById('people').innerHTML +=     '<li>' + names[i] + '</li>';
+			}
+		}
+*/
+	</script>
+</body>
+</html>
