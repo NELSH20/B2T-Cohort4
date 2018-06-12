@@ -1,0 +1,60 @@
+<!-- 
+Create a button that when clicked changes the button’s text from ‘ON’ to ‘OFF’ and vice versa
+ 
+*Pon INPUT en el cuerpo del HTML antes del script. Para cambiar entre "ON" y "OFF" Tambien dale los atributos de un botton como repasamos en la clase. 
+*Utiliza document.getelementById() Y guardalo en una variable para ahorra espacio.
+*Crea Una variable que matenga el valor ya sea de ON y OFF. La variable tiene que estar antes de la funcion.
+*Crea una funcion que utilize if o swtich declaraciones para poder cambiar entre ON y OF.
+Create a box that’s background color is green when the mouse is over it and red when it is not
+* crea switch stament. que 
+*Con la viarable document... utiliza "style= background-color= green".
+*Utiliza otra funcion que utilize && para comparar si el boton hover para que permite que sea verdad.
+The box should only change color when the button’s text is ‘ON’
+En tu if o switch statment tiene que c
+Create your event listeners in JavaScript
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Work</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<script type="text/javascript" src="JS.js"></script> 
+</head>
+<body>
+	<!--*Pon INPUT en el cuerpo del HTML antes del script. Para cambiar entre "ON" y "OFF" Tambien dale los atributos de un botton como repasamos en la clase. -->
+	<input id="toggle" type="button" value="ON">
+		<div id="box">
+		</div>
+	<script type="text/javascript">
+		var get = document.getElementById("toggle");
+		if(get){
+			/*Necesitaba un event listener. Que escucha al hacer un click en get. Que es el boton. Tambien  */
+			get.addEventListener('click', switcher, false);
+			function switcher() {
+				if (get.value == "ON"){
+					get.value = "OFF";
+				} else {
+					get.value = "ON";
+				}
+			}
+		}
+
+		// No necesito esto: switcher();
+		/* puedo hacer que el color cambie solo cuando el boton esta ON. Al reorganizar la logica del event listener. Solo puede ejecutar la funcion si el valor del boton es "ON"
+	
+		*/
+		var txt = document.getElementById('box');
+		if(txt){
+			txt.addEventListener('mouseenter', changeBackgroundColor, false);
+			txt.addEventListener('mouseleave', changeBackgroundColor, false);
+		}
+		function changeBackgroundColor(){
+			if (get.value == "ON"){
+					txt.style.backgroundColor = "green";
+				} else {
+					txt.style.backgroundColor = "red";
+				}
+		}
+	</script>
+</body>
+</html>
