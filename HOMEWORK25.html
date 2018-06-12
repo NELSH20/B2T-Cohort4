@@ -1,0 +1,63 @@
+<!-- 
+Create a button that when clicked changes the button’s text from ‘ON’ to ‘OFF’ and vice versa
+ 
+*Pon INPUT en el cuerpo del HTML antes del script. Para cambiar entre "ON" y "OFF" Tambien dale los atributos de un botton como repasamos en la clase. 
+
+*Utiliza document.getelementById() Y guardalo en una variable para ahorra espacio.
+
+*Crea Una variable que matenga el valor ya sea de ON y OFF. La variable tiene que estar antes de la funcion.
+
+*Crea una funcion que utilize if o swtich declaraciones para poder cambiar entre ON y OF.
+
+Create a box that’s background color is green when the mouse is over it and red when it is not
+* crea switch stament. que 
+*Con la viarable document... utiliza "style= background-color= green".
+
+*Utiliza otra funcion que utilize && para comparar si el boton hover para que permite que sea verdad.
+
+The box should only change color when the button’s text is ‘ON’
+En tu if o switch statment tiene que c
+
+Create your event listeners in JavaScript
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Work</title>
+	<style>
+	div {
+	    background-color:green;
+	    width: 350px;
+	    border: 25px;
+	    padding: 25px;
+	    margin: 25px;
+	}
+	</style>
+</head>
+<body>
+	<!--*Pon INPUT en el cuerpo del HTML antes del script. Para cambiar entre "ON" y "OFF" Tambien dale los atributos de un botton como repasamos en la clase. -->
+	<input id="toggle" type="button" value="ON">
+		<div id="box">
+	</div>
+	<script type="text/javascript">
+		var togle = "ON";
+		var get = document.getElementById("toggle")
+		function switcher() {
+			if (get.innerHTML == "ON"){
+				get.innerHTML="OFF";
+			} else {
+				get.innerHTML ="OFF";
+			}
+		}
+		switcher();
+
+		var txt = document.getElementById('box');
+			txt.addEventListener('mouseenter', changeBackgroundColor);
+			txt.addEventListener('mouseleave', changeBackgroundColor);
+		function changeBackgroundColor(){
+				txt.innerHTML = (togle == "ON") ? "style= 'background-color:green' " : "style= 'background-color:red' ";
+			}
+	</script>
+</body>
+</html>
