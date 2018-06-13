@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+	<body>
+		<ul id = 'show'></ul> 
+		<!-- Esto suena interesante para hacer un juego o una funcion para cocinar. -->
+		<!-- Nombre de la receta-->
+		<input id = "dishName" type="text" placeholder="Dish Name">
+		<!-- Lista de ingredientes-->
+		<input id="ingredients" type="text" placeholder="Enter Ingredients seperated by commas">
+		<!--El tiempo que dura la receta-->
+		<input id="timer" type="time" name="Duration">
+		<!-- Boton que agregar la informacion de la receta.-->
+		<input type ="button" value="Save to CookBook" onclick="saveData()">
+		<script>
+			var cookBook = [];
+			function recipe(){
+				return{ 
+					/* Esto son los parametros que consigue la receta de los botones*/
+					name: document.getElementById('dishName').value,
+					ingredients: document.getElementById("ingredients").value.split(','),
+					duration: document.getElementById('timer').value,
+					/* Esta linea solo crea la fecha en que se creo.*/
+					//dateCreadted: new Date().toString()	
+				};
+			}
+			// Esta funcion agrega la receta para tu 
+			//var cooked = cookBook.length;
+			//var cooking = cookBook[i];
+			function saveData(){
+				
+				cookBook.push(recipe() );
+				// Esta es una alerta que dice que objeto se añadido 
+				alert(cookBook[cookBook.length - 1].name + " has been added!");
+				displayCookBook();
+			}
+			function displayCookBook(){
+				// Asi puedo leer cada elemento en cookBook
+				//var cooking = cookBook[i];
+				for (var i=0; i<cookBook.length; i++){
+					document.getElementById("show").innerHTML += "<li>" + 
+					cookBook[i].name + " includes " +
+					//Asi puedo comvertir los ingredientes en oraciones
+					cookBook[i].ingredients.join(" and ")+ ".It takes "+
+
+					cookBook[i].duration +" to cook</li>"
+					
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--
+	Recipes!!
+	Name of Dish
+	List of Ingredients
+	Time to Cook
+
+	3 inputs para las propiedades Recipes 
+	Boton para salvar la receta
+	Almacena las recetas en nuestro cookBook
+
+	Busca por especifica recetas en cookBook
+	edit it
+	delete it
+	
+	Demuestra la lista de recetas
+	Name incluye (ingredientes separados por "and"). Toma la Duration long to cook.
+
+	Go thru CookBook (loop thru array )
+	consiguie el nombre de la receta, los ingredientes, duracion
+	usa join para demostrar ingredientes sseparados por "and"
+	demuestra 
+-->
