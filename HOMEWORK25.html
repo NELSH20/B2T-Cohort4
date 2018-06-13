@@ -39,7 +39,7 @@ Create your event listeners in JavaScript
 		if(get){
 			/*Necesitaba un event listener. Que escucha al hacer un click en get. Que es el boton. Tambien  */
 			get.addEventListener('click', switcher, false);
-			function switcher() {
+			function switcher(){
 				if (get.value == "ON"){
 					get.value = "OFF";
 				} else {
@@ -56,8 +56,8 @@ Create your event listeners in JavaScript
 		 /*changeBackgroundColor()*/
 			if (get.value == "ON"){
 					txt.style.backgroundColor = "green";
-				}
-				});
+						}
+					});
 				txt.addEventListener('mouseleave', /*changeBackgroundColor, false);*/
 				function()/*changeBackgroundColor()*/{
 				if (get.value =="ON"){
