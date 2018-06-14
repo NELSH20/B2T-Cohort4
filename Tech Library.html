@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>[TECH]Library Objects</title>
+	<!--<script src="Library.js"></script>-->
+</head>
+	<body>
+		<ul id="show">
+			
+		</ul>
+
+		<script>
+			var library = [
+
+  { author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+
+  { author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+
+  { author: 'Suzanne Collins', title:  'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
+
+];
+function displayRead(){
+				// Asi puedo leer cada elemento en cookBook
+				//var cooking = cookBook[i];
+				for (var i=0; i<library.length; i++){
+					//var li= library[i];
+					if (library[i].readingStatus == true){
+					document.getElementById("show").innerHTML += "<li>" + "Already read "+ library[i].title + " by " +
+					library[i].author + "</li>";
+					}
+					else{
+						document.getElementById("show").innerHTML += "<li>" + "You still need to read " + 
+						library[i].title +
+						" by " + library[i].author + "</li>";
+					}
+					/*
+					li.author 
+					li.title
+					li.reading
+					*/
+				}
+				
+			}
+			displayRead();
+		</script>
+	</body>
+</html>
