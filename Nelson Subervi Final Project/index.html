@@ -1,0 +1,71 @@
+
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Nelson's Empanadas Emporium</title>
+ 	<!-- CSS Style Link-->
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+ 	<!-- JavaScript-->
+ 	<script src="JavaScript.js"></script>
+ 	<!--BootStraps-->
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1, shrink-to-fit=no"/>
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/boots
+	trap.min.css"/>
+	<!--BootStap Links for Css-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<!--Bootstrap Links for JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+ </head>
+ <body>
+<!-- Barra de navegador -->
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+    	<!--Contenido de el navegador El H5 es el contenido que colapsa cuando precionas el boton de rallas -->
+      <h5 class="text-white h4">Quieres añadir una nueva persona</h5>
+
+      <input id="Name" type="text" placeholder="Names">
+
+      <span class="text-muted">?????</span>
+      <!--Contenido de el navegador El H5 es el contenido que colapsa cuando precionas el boton de rallas -->
+      <h5 class="text-white h4">Cuanto va a ser el total de tu factura</h5>
+      <input id="total" type="nuber" placeholder="Total">
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+      <!--Contenido de el navegador El H5 es el contenido que colapsa cuando precionas el boton de rallas -->
+      <h5 class="text-white h4">Collapsed content</h5>
+      <!-- Sub contenido -->
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h5 Class="N">Nelson</h5>
+  </nav>
+</div>
+ 	<h1>Bienvenido al emporio de empanadas</h1>
+ 	<!-- Poner una imagen de empanadas aqui-->
+ 	<!--Quienes son los usuarios -->
+ 	<!-- Busca la manera que tambien pueda distinguir Si el nombre solo tiene strings o esta vacio>-->
+ 	<input id="Name" type="text" placeholder="Names">
+ 	<!-- Quien paga que-->
+ 	<!-- Agrega un event listener para que con un click puedad incrementar el porcentaje de quien paga que-->
+ 	<input id="factura" type="number"  placeholder="How will you split it?">
+ 	<!--
+ 	<input id="dishName" type="text" placeholder="Dish Name">
+		<input id="ingredients" type="text" placeholder="Enter Ingredients seperated by commas">
+		<input id="timer" type="number" placeholder="Duration">-->
+
+		<input onclick="bill()" type="button" value="Save to Bill Split">
+
+		<ul id="display"></ul>
+		
+ </body>
+ </html>
