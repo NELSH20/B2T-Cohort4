@@ -31,15 +31,14 @@
 
       <input id="Name" type="text" placeholder="Names">
 
-      <span class="text-muted">?????</span>
-      <!--Contenido de el navegador El H5 es el contenido que colapsa cuando precionas el boton de rallas -->
+      <input id="add" type="button" value="Add User">
+
       <h5 class="text-white h4">Cuanto va a ser el total de tu factura</h5>
-      <input id="total" type="nuber" placeholder="Total">
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-      <!--Contenido de el navegador El H5 es el contenido que colapsa cuando precionas el boton de rallas -->
-      <h5 class="text-white h4">Collapsed content</h5>
-      <!-- Sub contenido -->
-      <span class="text-muted">Toggleable via the navbar brand.</span>
+
+      <input id="total" type="number" placeholder="Total">
+
+      <input onclick="bill()" type="button" value="Total Bill">
+
     </div>
   </div>
 
@@ -51,20 +50,6 @@
   </nav>
 </div>
  	<h1>Bienvenido al emporio de empanadas</h1>
- 	<!-- Poner una imagen de empanadas aqui-->
- 	<!--Quienes son los usuarios -->
- 	<!-- Busca la manera que tambien pueda distinguir Si el nombre solo tiene strings o esta vacio>-->
- 	<input id="Name" type="text" placeholder="Names">
- 	<!-- Quien paga que-->
- 	<!-- Agrega un event listener para que con un click puedad incrementar el porcentaje de quien paga que-->
- 	<input id="factura" type="number"  placeholder="How will you split it?">
- 	<!--
- 	<input id="dishName" type="text" placeholder="Dish Name">
-		<input id="ingredients" type="text" placeholder="Enter Ingredients seperated by commas">
-		<input id="timer" type="number" placeholder="Duration">-->
-
-		<input onclick="bill()" type="button" value="Save to Bill Split">
-
 		<ul id="display"></ul>
 		
  </body>
