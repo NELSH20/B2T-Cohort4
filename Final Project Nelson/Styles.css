@@ -1,0 +1,18 @@
+.navbar-collapse {
+  text-align:center;
+}
+.navbar-nav {
+    display:inline-block;
+    float:none;
+}
+
+.N{
+
+	color:white;
+}
+
+.userDisplay{
+	display: inline-block;
+	width: 30%;
+	text-align: center;
+}
