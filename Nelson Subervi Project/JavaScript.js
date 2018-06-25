@@ -9,7 +9,7 @@ var tips =0;
 			function bill(){
 				users = [];
 				var names= document.getElementById('User').value.split(',')
-				var totalBill= parseFloat(document.getElementById("bill").value)
+				totalBill= parseFloat(document.getElementById("bill").value)
 				//var avg = totalBill/names.length; 
 				var tips = parseFloat(document.getElementById('Tipping').value)
 				//var avg = (tips * totalBill)/ names.length;
