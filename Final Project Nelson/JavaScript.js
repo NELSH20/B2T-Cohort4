@@ -9,16 +9,20 @@ var tips =0;
 			function bill(){
 				users = [];
 				var names= document.getElementById('User').value.split(',')
-				var totalBill= document.getElementById("bill").value
-				var avg = totalBill/names.length; 
-				var tips = document.getElementById('Tipping').value
+				totalBill= parseFloat(document.getElementById("bill").value)
+				//var avg = totalBill/names.length; 
+				var tips = parseFloat(document.getElementById('Tipping').value)
 				//var avg = (tips * totalBill)/ names.length;
 				//var avg=Math.round(total * 100)/100;
 
 				//var avg = totalBill/names.length;
-
+				//dollar:(tips * avg ) + avg.toFixed(2)
+				//console.log(totalBill, names.length, tips)
+				totalBill=(totalBill*tips) + totalBill;
+				console.log(totalBill, tips, names.length)
+				var avg = totalBill/names.length;
 				for (var i = 0; i< names.length ; i++) {
-					var Person = { name: names[i], dollar:(tips * avg ) + avg.toFixed(2), porcengate: 100/names.length }
+					var Person = { name: names[i], dollar: avg.toFixed(2), porcengate: 100/names.length }
 					users.push(Person);
 				}
 			}
@@ -52,37 +56,44 @@ var tips =0;
 				}
 			}
 
-			
 			function C (){
 			 	console.log(this)
 			 	users[this.id].porcengate= this.value
 			 	users[this.id].dollar = (this.value/100) * totalBill;
 			 	show()
 			}
-			
+
+			function D(){
 			users[this.id].porcengate.toFixed(2)
 			users[this.id].dollar.toFixed(2)
+			}
 
 			function saveData(){
 				bill()
 				show()
 			}
+
+/* Random color generator for the boxes and the triangles//
+ function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+function setRandomColor() {
+  $(".row").css("background-color", getRandomColor());
+}
+
+ */
 /*	Tengo que reaccinar el porcentaje del elemento del objeto al precionar la caja con un input el porcentaje tiene que ser reaccinado.
- 
- 	document.getElement("input").addEventListener("click", C);
- 	function C (){
- 	Person[i].dollar= totaLBill/show(input)
- 	}
 	function if the user change the percentage of each bill. it will affect their dollar ammount.
 	this will affect variable dollar. The function will listen to input. The input will be set equal to the new value.
 	I dont know how to do it but I can check on w3d. It needs to have an event listener? why if the event is happening between the own HTML, 
 	Then I have to make the input runs trough.
 	Will it need a new parameter in the object.
-		input.Cambio("click", NP
-		})
-		 function Np(){
-		dollar = (input/100) * dollar}
-	 No user can pay more than 100 percent of the bill. all has to add up to 100
 */
 
 // Necesito saber como comvertir numeros enteros a porcentaje
